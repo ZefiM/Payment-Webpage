@@ -1,0 +1,123 @@
+/*==========================================================================================*/
+/*Payment Processing css*/
+
+/*Credit card and paypal images used
+Needed to resize in order to look good.*/
+img.payMethod {
+  max-width:5%;
+  max-height:5%;
+}
+/* Center the radio button on the image */
+input[type="radio"], img.payMethod {
+    vertical-align: middle;
+  }
+
+/* The radio buttons */
+.Payment_options {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the default radio buttons */
+.Payment_options input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create custom radio buttons */
+.Payment_button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+/* Hovering adds a grey background color */
+.Payment_options:hover input ~ .Payment_button {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, green background */
+.Payment_options input:checked ~ .Payment_button {
+  background-color: green;
+}
+
+/* Create the dot/circle */
+.Payment_button:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the dot/circle when checked */
+.Payment_options input:checked ~ .Payment_button:after {
+  display: block;
+}
+
+/* Modify the dot/circle */
+.Payment_options .Payment_button:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*======================================*/
+/*Credit Card Form*/
+.CreditCardForm{
+  /* Just to center the form on the page */
+  margin: left;
+  width: 4000px;
+  position: relative;
+}
+
+.CreditCardForm div + div {
+  margin-top: 1em;
+  position: relative;
+}
+
+/*Credit Card Labels*/
+.CCLabels{
+  /* To make sure that all labels have the same size and are properly aligned */
+  display: inline-block;
+  width: 125px;
+  text-align: right;
+}
+
+/*TextBox*/
+.ccTextBox {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* To give the same size to all text fields */
+  width: 200px;
+  box-sizing: border-box;
+
+  /* To harmonize the look & feel of text field border */
+  border: 1px solid #999;
+}
+
+/*Button*/
+div.PayButton {
+  /* To position the buttons to the same position of the text fields */
+position: absolute;
+right: 1000px;
+
+}
+
+
+
